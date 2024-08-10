@@ -470,12 +470,13 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
         if (dieOut) {
             return false;
         }
-
-
         delete animationHandlerResponse.dieOut;
+        // TODO - when we know this works, restructure! (ts fails as we're trying to pipe out a new prop!'
+        // @ts-ignore
         this.setState({
-            ...animationHandlerResponse as CarouselState,
+            ...animationHandlerResponse,
         });
+
         // If we have not moved, we should have an empty object returned
         // Return false to allow scrolling when not swiping
         return !!Object.keys(animationHandlerResponse).length;

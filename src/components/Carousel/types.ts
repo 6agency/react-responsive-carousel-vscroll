@@ -24,6 +24,8 @@ export interface CarouselProps {
     ariaLabel?: string | undefined;
     axis: 'horizontal' | 'vertical';
     autoFocus?: boolean;
+    dieOut?: boolean;
+
     autoPlay?: boolean;
     centerMode?: boolean;
     centerSlidePercentage: number;
@@ -81,6 +83,8 @@ export interface CarouselState {
     initialized: boolean;
     isMouseEntered: boolean;
     itemSize: number;
+    dieOut?: boolean;
+
     previousItem: number;
     selectedItem: number;
     swiping?: boolean;
