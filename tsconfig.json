@@ -16,5 +16,5 @@
             "react-easy-swipe": ["./types/react-easy-swipe.d.ts"]
         }
     },
-    "include": ["./src/**/*.ts", "./src/**/*.tsx"]
+    "include": ["./src/**/*.ts", "./src/**/*.tsx", "./alltypes.d.ts"]
 }

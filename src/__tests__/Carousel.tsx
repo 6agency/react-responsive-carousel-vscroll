@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+// @ts-ignore
 import { shallow, mount, ReactWrapper } from 'enzyme';
 import renderer from 'react-test-renderer';
 import * as index from '../index';
@@ -22,6 +23,7 @@ import { slideSwipeAnimationHandler } from '../components/Carousel/animations';
  * @jest-environment jsdom
  */
 
+// @ts-ignore
 const findDOMNodeWithinWrapper = (wrapper: ReactWrapper, domNode: HTMLElement) => {
     return wrapper.findWhere((n: any) => n.getDOMNode() === domNode).simulate('click');
 };
@@ -31,6 +33,7 @@ describe('Slider', function() {
 
     let window: Window;
     let document: Document;
+    // @ts-ignore
     let component: ReactWrapper;
     let componentInstance: any;
     let totalChildren: number;
@@ -42,7 +45,7 @@ describe('Slider', function() {
     const bootstrap = (props: Partial<CarouselProps>, children: CarouselProps['children']) => {
         window = getWindow();
         document = getDocument();
-
+        // @ts-ignore
         component = mount<Partial<CarouselProps>>(<Carousel {...props}>{children}</Carousel>);
 
         componentInstance = component.instance();
