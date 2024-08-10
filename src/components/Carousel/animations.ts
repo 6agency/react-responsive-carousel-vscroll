@@ -86,6 +86,7 @@ export const slideSwipeAnimationHandler: SwipeAnimationHandler = (
         : getPosition(childrenLength - 1, props);
 
     const axisDelta = isHorizontal ? delta.x : delta.y;
+
     let handledDelta = axisDelta;
 
     // prevent user from swiping left out of boundaries
@@ -95,6 +96,10 @@ export const slideSwipeAnimationHandler: SwipeAnimationHandler = (
 
     // prevent user from swiping right out of boundaries
     if (currentPosition === finalBoundry && axisDelta < 0) {
+        handledDelta = 0;
+    }
+    // If horizontal and the user mostly wants to move up/down, dont trigger left/right scroll
+    if (isHorizontal && Math.abs(delta.x) < Math.abs(delta.y)) {
         handledDelta = 0;
     }
 
