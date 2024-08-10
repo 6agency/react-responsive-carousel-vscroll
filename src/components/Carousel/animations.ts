@@ -121,7 +121,7 @@ export const slideSwipeAnimationHandler: SwipeAnimationHandler = (
         }
     }
 
-    if (!props.preventMovementUntilSwipeScrollTolerance || hasMoved || state.swipeMovementStarted) {
+    if (!isSwipeBlockedFromDeltaExceedPrimary && (!props.preventMovementUntilSwipeScrollTolerance || hasMoved || state.swipeMovementStarted)) {
         if (!state.swipeMovementStarted) {
             setState({ swipeMovementStarted: true });
         }
@@ -130,11 +130,19 @@ export const slideSwipeAnimationHandler: SwipeAnimationHandler = (
     }
 
     //allows scroll if the swipe was within the tolerance
-    if (hasMoved && !state.cancelClick) {
+    if (hasMoved && !state.cancelClick && !isSwipeBlockedFromDeltaExceedPrimary) {
         setState({
             cancelClick: true,
         });
     }
+
+    if (isSwipeBlockedFromDeltaExceedPrimary) {
+        setState({
+            cancelClick: true,
+            swipeMovementStarted: false
+        });
+    }
+
     return returnStyles;
 };
 
