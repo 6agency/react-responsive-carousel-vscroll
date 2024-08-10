@@ -99,12 +99,17 @@ export const slideSwipeAnimationHandler: SwipeAnimationHandler = (
         handledDelta = 0;
     }
     // If horizontal and the user mostly wants to move up/down, dont trigger left/right scroll
+    let isSwipeBlockedFromDeltaExceedPrimary = false;
     if (isHorizontal && Math.abs(delta.x) < Math.abs(delta.y)) {
+        isSwipeBlockedFromDeltaExceedPrimary = true;
+    }
+
+    if (isSwipeBlockedFromDeltaExceedPrimary) {
         handledDelta = 0;
     }
 
     let position = currentPosition + 100 / (state.itemSize / handledDelta);
-    const hasMoved = Math.abs(axisDelta) > props.swipeScrollTolerance;
+    const hasMoved = (Math.abs(axisDelta) > props.swipeScrollTolerance) && !isSwipeBlockedFromDeltaExceedPrimary;
 
     if (props.infiniteLoop && hasMoved) {
         // When allowing infinite loop, if we slide left from position 0 we reveal the cloned last slide that appears before it
