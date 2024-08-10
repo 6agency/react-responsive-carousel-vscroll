@@ -137,7 +137,6 @@ export const slideSwipeAnimationHandler: SwipeAnimationHandler = (
     }
 
     if (isSwipeBlockedFromDeltaExceedPrimary) {
-        console.log('xxx');
         setState({
             cancelClick: false,
             swiping: false,

@@ -172,8 +172,10 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
         }
 
         if (prevProps.selectedItem !== this.props.selectedItem || prevProps.centerMode !== this.props.centerMode) {
-            this.updateSizes();
-            this.moveTo(this.props.selectedItem);
+            if (!this.props?.dieOut) {
+                this.updateSizes();
+                this.moveTo(this.props.selectedItem);
+            }
         }
 
         if (prevProps.autoPlay !== this.props.autoPlay) {
