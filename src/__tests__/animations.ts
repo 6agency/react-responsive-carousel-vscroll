@@ -4,6 +4,7 @@ import {
     fadeAnimationHandler,
     slideAnimationHandler,
     slideSwipeAnimationHandler,
+
 } from '../components/Carousel/animations';
 
 /**

@@ -18,8 +18,12 @@ import {
 import { getPosition } from '../components/Carousel/utils';
 import { slideSwipeAnimationHandler } from '../components/Carousel/animations';
 
+/**
+ * @jest-environment jsdom
+ */
+
 const findDOMNodeWithinWrapper = (wrapper: ReactWrapper, domNode: HTMLElement) => {
-    return wrapper.findWhere((n) => n.getDOMNode() === domNode).simulate('click');
+    return wrapper.findWhere((n: any) => n.getDOMNode() === domNode).simulate('click');
 };
 
 describe('Slider', function() {

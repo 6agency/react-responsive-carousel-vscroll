@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 import(/* webpackChunkName: "carousel-component" */ './components/Carousel').then(({ default: Carousel }) => {
     const DemoCarousel = () => (
@@ -38,5 +38,7 @@ import(/* webpackChunkName: "carousel-component" */ './components/Carousel').the
             </div>
         </Carousel>
     );
-    ReactDOM.render(<DemoCarousel />, document.querySelector('.demo-carousel'));
+    const container = document.querySelector('.demo-carousel');
+    const root = createRoot(container!);
+    root.render(<DemoCarousel />);
 });

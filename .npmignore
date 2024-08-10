@@ -15,6 +15,7 @@ lib/main.js
 .prettierignore
 .prettierrc.json
 .cache
+.parcel-cache
 .storybook
 stories
 yarn.lock
