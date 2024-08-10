@@ -34,11 +34,26 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs.jest.jest_package": "",
     "nodejs_package_manager_path": "yarn",
-    "ts.external.directory.path": "C:\\Users\\philg\\www\\react-responsive-carousel-vscroll\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.2.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="All Tests" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.All Tests" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -47,7 +62,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1723296705019</updated>
-      <workItem from="1723296706004" duration="1580000" />
+      <workItem from="1723296706004" duration="3718000" />
     </task>
     <servers />
   </component>

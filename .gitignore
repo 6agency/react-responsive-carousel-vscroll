@@ -3,6 +3,7 @@ node_modules/
 npm-debug.log
 .cache/
 dev
+.parcel-cache/
 lib
 dist
 temp
