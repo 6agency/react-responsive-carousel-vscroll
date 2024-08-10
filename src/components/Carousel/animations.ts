@@ -74,6 +74,7 @@ export const slideSwipeAnimationHandler: SwipeAnimationHandler = (
     state,
     setState
 ): AnimationHandlerResponse => {
+    console.log(state)
     const returnStyles: AnimationHandlerResponse = {};
     const isHorizontal = props.axis === 'horizontal';
     const childrenLength = Children.count(props.children);
@@ -138,7 +139,8 @@ export const slideSwipeAnimationHandler: SwipeAnimationHandler = (
 
     if (isSwipeBlockedFromDeltaExceedPrimary) {
         setState({
-            cancelClick: true,
+            cancelClick: false,
+            swiping: false,
             swipeMovementStarted: false
         });
     }
