@@ -124,7 +124,7 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
             selectedItem: props.selectedItem,
             hasMount: false,
             isMouseEntered: false,
-            autoPlay: props.autoPlay,
+            autoPlay: false,
             swiping: false,
             swipeMovementStarted: false,
             cancelClick: false,
@@ -466,10 +466,16 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
             this.setState.bind(this)
         );
 
-        this.setState({
-            ...animationHandlerResponse,
-        });
+        const dieOut = animationHandlerResponse.dieOut;
+        if (dieOut) {
+            return false;
+        }
 
+
+        delete animationHandlerResponse.dieOut;
+        this.setState({
+            ...animationHandlerResponse as CarouselState,
+        });
         // If we have not moved, we should have an empty object returned
         // Return false to allow scrolling when not swiping
         return !!Object.keys(animationHandlerResponse).length;

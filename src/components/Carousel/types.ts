@@ -2,6 +2,7 @@ export interface AnimationHandlerResponse {
     itemListStyle?: React.CSSProperties;
     slideStyle?: React.CSSProperties;
     selectedStyle?: React.CSSProperties;
+    dieOut?: boolean;
     prevStyle?: React.CSSProperties;
 }
 
