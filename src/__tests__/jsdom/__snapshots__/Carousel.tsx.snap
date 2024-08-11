@@ -37,7 +37,7 @@ exports[`Slider Basics Default Props methods renderItem should pass through the 
 `;
 
 exports[`Slider Basics Default Props methods renderThumbs should return a list of images extracted from the children 1`] = `
-Array [
+[
   <img
     src="assets/1.jpeg"
   />,
@@ -69,7 +69,7 @@ exports[`Slider Snapshots center mode 1`] = `
   <div
     className="carousel carousel-slider"
     style={
-      Object {
+      {
         "width": "100%",
       }
     }
@@ -149,7 +149,7 @@ exports[`Slider Snapshots center mode 1`] = `
     />
     <div
       className="slider-wrapper axis-horizontal"
-      style={Object {}}
+      style={{}}
     >
       <ul
         className="slider animated"
@@ -157,7 +157,7 @@ exports[`Slider Snapshots center mode 1`] = `
         onTouchEnd={[Function]}
         onTouchStart={[Function]}
         style={
-          Object {
+          {
             "MozTransitionDuration": "350ms",
             "OTransform": "translate3d(0,0,0)",
             "OTransitionDuration": "350ms",
@@ -174,7 +174,7 @@ exports[`Slider Snapshots center mode 1`] = `
           className="slide selected previous"
           onClick={[Function]}
           style={
-            Object {
+            {
               "minWidth": "80%",
             }
           }
@@ -187,7 +187,7 @@ exports[`Slider Snapshots center mode 1`] = `
           className="slide"
           onClick={[Function]}
           style={
-            Object {
+            {
               "minWidth": "80%",
             }
           }
@@ -200,7 +200,7 @@ exports[`Slider Snapshots center mode 1`] = `
           className="slide"
           onClick={[Function]}
           style={
-            Object {
+            {
               "minWidth": "80%",
             }
           }
@@ -213,7 +213,7 @@ exports[`Slider Snapshots center mode 1`] = `
           className="slide"
           onClick={[Function]}
           style={
-            Object {
+            {
               "minWidth": "80%",
             }
           }
@@ -226,7 +226,7 @@ exports[`Slider Snapshots center mode 1`] = `
           className="slide"
           onClick={[Function]}
           style={
-            Object {
+            {
               "minWidth": "80%",
             }
           }
@@ -239,7 +239,7 @@ exports[`Slider Snapshots center mode 1`] = `
           className="slide"
           onClick={[Function]}
           style={
-            Object {
+            {
               "minWidth": "80%",
             }
           }
@@ -252,7 +252,7 @@ exports[`Slider Snapshots center mode 1`] = `
           className="slide"
           onClick={[Function]}
           style={
-            Object {
+            {
               "minWidth": "80%",
             }
           }
@@ -293,7 +293,7 @@ exports[`Slider Snapshots center mode 1`] = `
         onTouchEnd={[Function]}
         onTouchStart={[Function]}
         style={
-          Object {
+          {
             "MozTransform": "translate3d(0,0,0)",
             "MozTransitionDuration": "350ms",
             "MsTransform": "translate3d(0,0,0)",
@@ -316,7 +316,7 @@ exports[`Slider Snapshots center mode 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -333,7 +333,7 @@ exports[`Slider Snapshots center mode 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -350,7 +350,7 @@ exports[`Slider Snapshots center mode 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -367,7 +367,7 @@ exports[`Slider Snapshots center mode 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -384,7 +384,7 @@ exports[`Slider Snapshots center mode 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -401,7 +401,7 @@ exports[`Slider Snapshots center mode 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -418,7 +418,7 @@ exports[`Slider Snapshots center mode 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -447,7 +447,7 @@ exports[`Slider Snapshots custom class name 1`] = `
   <div
     className="carousel carousel-slider"
     style={
-      Object {
+      {
         "width": "100%",
       }
     }
@@ -527,7 +527,7 @@ exports[`Slider Snapshots custom class name 1`] = `
     />
     <div
       className="slider-wrapper axis-horizontal"
-      style={Object {}}
+      style={{}}
     >
       <ul
         className="slider animated"
@@ -535,7 +535,7 @@ exports[`Slider Snapshots custom class name 1`] = `
         onTouchEnd={[Function]}
         onTouchStart={[Function]}
         style={
-          Object {
+          {
             "MozTransitionDuration": "350ms",
             "OTransform": "translate3d(0,0,0)",
             "OTransitionDuration": "350ms",
@@ -551,7 +551,7 @@ exports[`Slider Snapshots custom class name 1`] = `
         <li
           className="slide selected previous"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/1.jpeg"
@@ -560,7 +560,7 @@ exports[`Slider Snapshots custom class name 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/2.jpeg"
@@ -569,7 +569,7 @@ exports[`Slider Snapshots custom class name 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/3.jpeg"
@@ -578,7 +578,7 @@ exports[`Slider Snapshots custom class name 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/4.jpeg"
@@ -587,7 +587,7 @@ exports[`Slider Snapshots custom class name 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/5.jpeg"
@@ -596,7 +596,7 @@ exports[`Slider Snapshots custom class name 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/6.jpeg"
@@ -605,7 +605,7 @@ exports[`Slider Snapshots custom class name 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/7.jpeg"
@@ -643,7 +643,7 @@ exports[`Slider Snapshots custom class name 1`] = `
         onTouchEnd={[Function]}
         onTouchStart={[Function]}
         style={
-          Object {
+          {
             "MozTransform": "translate3d(0,0,0)",
             "MozTransitionDuration": "350ms",
             "MsTransform": "translate3d(0,0,0)",
@@ -666,7 +666,7 @@ exports[`Slider Snapshots custom class name 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -683,7 +683,7 @@ exports[`Slider Snapshots custom class name 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -700,7 +700,7 @@ exports[`Slider Snapshots custom class name 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -717,7 +717,7 @@ exports[`Slider Snapshots custom class name 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -734,7 +734,7 @@ exports[`Slider Snapshots custom class name 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -751,7 +751,7 @@ exports[`Slider Snapshots custom class name 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -768,7 +768,7 @@ exports[`Slider Snapshots custom class name 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -797,7 +797,7 @@ exports[`Slider Snapshots custom width 1`] = `
   <div
     className="carousel carousel-slider"
     style={
-      Object {
+      {
         "width": "700px",
       }
     }
@@ -877,7 +877,7 @@ exports[`Slider Snapshots custom width 1`] = `
     />
     <div
       className="slider-wrapper axis-horizontal"
-      style={Object {}}
+      style={{}}
     >
       <ul
         className="slider animated"
@@ -885,7 +885,7 @@ exports[`Slider Snapshots custom width 1`] = `
         onTouchEnd={[Function]}
         onTouchStart={[Function]}
         style={
-          Object {
+          {
             "MozTransitionDuration": "350ms",
             "OTransform": "translate3d(0,0,0)",
             "OTransitionDuration": "350ms",
@@ -901,7 +901,7 @@ exports[`Slider Snapshots custom width 1`] = `
         <li
           className="slide selected previous"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/1.jpeg"
@@ -910,7 +910,7 @@ exports[`Slider Snapshots custom width 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/2.jpeg"
@@ -919,7 +919,7 @@ exports[`Slider Snapshots custom width 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/3.jpeg"
@@ -928,7 +928,7 @@ exports[`Slider Snapshots custom width 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/4.jpeg"
@@ -937,7 +937,7 @@ exports[`Slider Snapshots custom width 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/5.jpeg"
@@ -946,7 +946,7 @@ exports[`Slider Snapshots custom width 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/6.jpeg"
@@ -955,7 +955,7 @@ exports[`Slider Snapshots custom width 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/7.jpeg"
@@ -993,7 +993,7 @@ exports[`Slider Snapshots custom width 1`] = `
         onTouchEnd={[Function]}
         onTouchStart={[Function]}
         style={
-          Object {
+          {
             "MozTransform": "translate3d(0,0,0)",
             "MozTransitionDuration": "350ms",
             "MsTransform": "translate3d(0,0,0)",
@@ -1016,7 +1016,7 @@ exports[`Slider Snapshots custom width 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -1033,7 +1033,7 @@ exports[`Slider Snapshots custom width 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -1050,7 +1050,7 @@ exports[`Slider Snapshots custom width 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -1067,7 +1067,7 @@ exports[`Slider Snapshots custom width 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -1084,7 +1084,7 @@ exports[`Slider Snapshots custom width 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -1101,7 +1101,7 @@ exports[`Slider Snapshots custom width 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -1118,7 +1118,7 @@ exports[`Slider Snapshots custom width 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -1147,7 +1147,7 @@ exports[`Slider Snapshots default 1`] = `
   <div
     className="carousel carousel-slider"
     style={
-      Object {
+      {
         "width": "100%",
       }
     }
@@ -1227,7 +1227,7 @@ exports[`Slider Snapshots default 1`] = `
     />
     <div
       className="slider-wrapper axis-horizontal"
-      style={Object {}}
+      style={{}}
     >
       <ul
         className="slider animated"
@@ -1235,7 +1235,7 @@ exports[`Slider Snapshots default 1`] = `
         onTouchEnd={[Function]}
         onTouchStart={[Function]}
         style={
-          Object {
+          {
             "MozTransitionDuration": "350ms",
             "OTransform": "translate3d(0,0,0)",
             "OTransitionDuration": "350ms",
@@ -1251,7 +1251,7 @@ exports[`Slider Snapshots default 1`] = `
         <li
           className="slide selected previous"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/1.jpeg"
@@ -1260,7 +1260,7 @@ exports[`Slider Snapshots default 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/2.jpeg"
@@ -1269,7 +1269,7 @@ exports[`Slider Snapshots default 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/3.jpeg"
@@ -1278,7 +1278,7 @@ exports[`Slider Snapshots default 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/4.jpeg"
@@ -1287,7 +1287,7 @@ exports[`Slider Snapshots default 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/5.jpeg"
@@ -1296,7 +1296,7 @@ exports[`Slider Snapshots default 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/6.jpeg"
@@ -1305,7 +1305,7 @@ exports[`Slider Snapshots default 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/7.jpeg"
@@ -1343,7 +1343,7 @@ exports[`Slider Snapshots default 1`] = `
         onTouchEnd={[Function]}
         onTouchStart={[Function]}
         style={
-          Object {
+          {
             "MozTransform": "translate3d(0,0,0)",
             "MozTransitionDuration": "350ms",
             "MsTransform": "translate3d(0,0,0)",
@@ -1366,7 +1366,7 @@ exports[`Slider Snapshots default 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -1383,7 +1383,7 @@ exports[`Slider Snapshots default 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -1400,7 +1400,7 @@ exports[`Slider Snapshots default 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -1417,7 +1417,7 @@ exports[`Slider Snapshots default 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -1434,7 +1434,7 @@ exports[`Slider Snapshots default 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -1451,7 +1451,7 @@ exports[`Slider Snapshots default 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -1468,7 +1468,7 @@ exports[`Slider Snapshots default 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -1497,7 +1497,7 @@ exports[`Slider Snapshots infinite loop 1`] = `
   <div
     className="carousel carousel-slider"
     style={
-      Object {
+      {
         "width": "100%",
       }
     }
@@ -1577,7 +1577,7 @@ exports[`Slider Snapshots infinite loop 1`] = `
     />
     <div
       className="slider-wrapper axis-horizontal"
-      style={Object {}}
+      style={{}}
     >
       <ul
         className="slider animated"
@@ -1585,7 +1585,7 @@ exports[`Slider Snapshots infinite loop 1`] = `
         onTouchEnd={[Function]}
         onTouchStart={[Function]}
         style={
-          Object {
+          {
             "MozTransitionDuration": "350ms",
             "OTransform": "translate3d(-100%,0,0)",
             "OTransitionDuration": "350ms",
@@ -1601,7 +1601,7 @@ exports[`Slider Snapshots infinite loop 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/7.jpeg"
@@ -1610,7 +1610,7 @@ exports[`Slider Snapshots infinite loop 1`] = `
         <li
           className="slide selected previous"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/1.jpeg"
@@ -1619,7 +1619,7 @@ exports[`Slider Snapshots infinite loop 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/2.jpeg"
@@ -1628,7 +1628,7 @@ exports[`Slider Snapshots infinite loop 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/3.jpeg"
@@ -1637,7 +1637,7 @@ exports[`Slider Snapshots infinite loop 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/4.jpeg"
@@ -1646,7 +1646,7 @@ exports[`Slider Snapshots infinite loop 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/5.jpeg"
@@ -1655,7 +1655,7 @@ exports[`Slider Snapshots infinite loop 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/6.jpeg"
@@ -1664,7 +1664,7 @@ exports[`Slider Snapshots infinite loop 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/7.jpeg"
@@ -1673,7 +1673,7 @@ exports[`Slider Snapshots infinite loop 1`] = `
         <li
           className="slide selected previous"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/1.jpeg"
@@ -1711,7 +1711,7 @@ exports[`Slider Snapshots infinite loop 1`] = `
         onTouchEnd={[Function]}
         onTouchStart={[Function]}
         style={
-          Object {
+          {
             "MozTransform": "translate3d(0,0,0)",
             "MozTransitionDuration": "350ms",
             "MsTransform": "translate3d(0,0,0)",
@@ -1734,7 +1734,7 @@ exports[`Slider Snapshots infinite loop 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -1751,7 +1751,7 @@ exports[`Slider Snapshots infinite loop 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -1768,7 +1768,7 @@ exports[`Slider Snapshots infinite loop 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -1785,7 +1785,7 @@ exports[`Slider Snapshots infinite loop 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -1802,7 +1802,7 @@ exports[`Slider Snapshots infinite loop 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -1819,7 +1819,7 @@ exports[`Slider Snapshots infinite loop 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -1836,7 +1836,7 @@ exports[`Slider Snapshots infinite loop 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -1865,7 +1865,7 @@ exports[`Slider Snapshots no arrows 1`] = `
   <div
     className="carousel carousel-slider"
     style={
-      Object {
+      {
         "width": "100%",
       }
     }
@@ -1945,7 +1945,7 @@ exports[`Slider Snapshots no arrows 1`] = `
     />
     <div
       className="slider-wrapper axis-horizontal"
-      style={Object {}}
+      style={{}}
     >
       <ul
         className="slider animated"
@@ -1953,7 +1953,7 @@ exports[`Slider Snapshots no arrows 1`] = `
         onTouchEnd={[Function]}
         onTouchStart={[Function]}
         style={
-          Object {
+          {
             "MozTransitionDuration": "350ms",
             "OTransform": "translate3d(0,0,0)",
             "OTransitionDuration": "350ms",
@@ -1969,7 +1969,7 @@ exports[`Slider Snapshots no arrows 1`] = `
         <li
           className="slide selected previous"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/1.jpeg"
@@ -1978,7 +1978,7 @@ exports[`Slider Snapshots no arrows 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/2.jpeg"
@@ -1987,7 +1987,7 @@ exports[`Slider Snapshots no arrows 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/3.jpeg"
@@ -1996,7 +1996,7 @@ exports[`Slider Snapshots no arrows 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/4.jpeg"
@@ -2005,7 +2005,7 @@ exports[`Slider Snapshots no arrows 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/5.jpeg"
@@ -2014,7 +2014,7 @@ exports[`Slider Snapshots no arrows 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/6.jpeg"
@@ -2023,7 +2023,7 @@ exports[`Slider Snapshots no arrows 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/7.jpeg"
@@ -2061,7 +2061,7 @@ exports[`Slider Snapshots no arrows 1`] = `
         onTouchEnd={[Function]}
         onTouchStart={[Function]}
         style={
-          Object {
+          {
             "MozTransform": "translate3d(0,0,0)",
             "MozTransitionDuration": "350ms",
             "MsTransform": "translate3d(0,0,0)",
@@ -2084,7 +2084,7 @@ exports[`Slider Snapshots no arrows 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -2101,7 +2101,7 @@ exports[`Slider Snapshots no arrows 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -2118,7 +2118,7 @@ exports[`Slider Snapshots no arrows 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -2135,7 +2135,7 @@ exports[`Slider Snapshots no arrows 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -2152,7 +2152,7 @@ exports[`Slider Snapshots no arrows 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -2169,7 +2169,7 @@ exports[`Slider Snapshots no arrows 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -2186,7 +2186,7 @@ exports[`Slider Snapshots no arrows 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -2217,7 +2217,7 @@ exports[`Slider Snapshots no indicators 1`] = `
   <div
     className="carousel carousel-slider"
     style={
-      Object {
+      {
         "width": "100%",
       }
     }
@@ -2230,7 +2230,7 @@ exports[`Slider Snapshots no indicators 1`] = `
     />
     <div
       className="slider-wrapper axis-horizontal"
-      style={Object {}}
+      style={{}}
     >
       <ul
         className="slider animated"
@@ -2238,7 +2238,7 @@ exports[`Slider Snapshots no indicators 1`] = `
         onTouchEnd={[Function]}
         onTouchStart={[Function]}
         style={
-          Object {
+          {
             "MozTransitionDuration": "350ms",
             "OTransform": "translate3d(0,0,0)",
             "OTransitionDuration": "350ms",
@@ -2254,7 +2254,7 @@ exports[`Slider Snapshots no indicators 1`] = `
         <li
           className="slide selected previous"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/1.jpeg"
@@ -2263,7 +2263,7 @@ exports[`Slider Snapshots no indicators 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/2.jpeg"
@@ -2272,7 +2272,7 @@ exports[`Slider Snapshots no indicators 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/3.jpeg"
@@ -2281,7 +2281,7 @@ exports[`Slider Snapshots no indicators 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/4.jpeg"
@@ -2290,7 +2290,7 @@ exports[`Slider Snapshots no indicators 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/5.jpeg"
@@ -2299,7 +2299,7 @@ exports[`Slider Snapshots no indicators 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/6.jpeg"
@@ -2308,7 +2308,7 @@ exports[`Slider Snapshots no indicators 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/7.jpeg"
@@ -2346,7 +2346,7 @@ exports[`Slider Snapshots no indicators 1`] = `
         onTouchEnd={[Function]}
         onTouchStart={[Function]}
         style={
-          Object {
+          {
             "MozTransform": "translate3d(0,0,0)",
             "MozTransitionDuration": "350ms",
             "MsTransform": "translate3d(0,0,0)",
@@ -2369,7 +2369,7 @@ exports[`Slider Snapshots no indicators 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -2386,7 +2386,7 @@ exports[`Slider Snapshots no indicators 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -2403,7 +2403,7 @@ exports[`Slider Snapshots no indicators 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -2420,7 +2420,7 @@ exports[`Slider Snapshots no indicators 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -2437,7 +2437,7 @@ exports[`Slider Snapshots no indicators 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -2454,7 +2454,7 @@ exports[`Slider Snapshots no indicators 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -2471,7 +2471,7 @@ exports[`Slider Snapshots no indicators 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -2500,7 +2500,7 @@ exports[`Slider Snapshots no indicators 2`] = `
   <div
     className="carousel carousel-slider"
     style={
-      Object {
+      {
         "width": "100%",
       }
     }
@@ -2580,7 +2580,7 @@ exports[`Slider Snapshots no indicators 2`] = `
     />
     <div
       className="slider-wrapper axis-horizontal"
-      style={Object {}}
+      style={{}}
     >
       <ul
         className="slider animated"
@@ -2588,7 +2588,7 @@ exports[`Slider Snapshots no indicators 2`] = `
         onTouchEnd={[Function]}
         onTouchStart={[Function]}
         style={
-          Object {
+          {
             "MozTransitionDuration": "350ms",
             "OTransform": "translate3d(0,0,0)",
             "OTransitionDuration": "350ms",
@@ -2604,7 +2604,7 @@ exports[`Slider Snapshots no indicators 2`] = `
         <li
           className="slide selected previous"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/1.jpeg"
@@ -2613,7 +2613,7 @@ exports[`Slider Snapshots no indicators 2`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/2.jpeg"
@@ -2622,7 +2622,7 @@ exports[`Slider Snapshots no indicators 2`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/3.jpeg"
@@ -2631,7 +2631,7 @@ exports[`Slider Snapshots no indicators 2`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/4.jpeg"
@@ -2640,7 +2640,7 @@ exports[`Slider Snapshots no indicators 2`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/5.jpeg"
@@ -2649,7 +2649,7 @@ exports[`Slider Snapshots no indicators 2`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/6.jpeg"
@@ -2658,7 +2658,7 @@ exports[`Slider Snapshots no indicators 2`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/7.jpeg"
@@ -2691,7 +2691,7 @@ exports[`Slider Snapshots no indicators 2`] = `
         onTouchEnd={[Function]}
         onTouchStart={[Function]}
         style={
-          Object {
+          {
             "MozTransform": "translate3d(0,0,0)",
             "MozTransitionDuration": "350ms",
             "MsTransform": "translate3d(0,0,0)",
@@ -2714,7 +2714,7 @@ exports[`Slider Snapshots no indicators 2`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -2731,7 +2731,7 @@ exports[`Slider Snapshots no indicators 2`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -2748,7 +2748,7 @@ exports[`Slider Snapshots no indicators 2`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -2765,7 +2765,7 @@ exports[`Slider Snapshots no indicators 2`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -2782,7 +2782,7 @@ exports[`Slider Snapshots no indicators 2`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -2799,7 +2799,7 @@ exports[`Slider Snapshots no indicators 2`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -2816,7 +2816,7 @@ exports[`Slider Snapshots no indicators 2`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -2845,7 +2845,7 @@ exports[`Slider Snapshots no thumbs 1`] = `
   <div
     className="carousel carousel-slider"
     style={
-      Object {
+      {
         "width": "100%",
       }
     }
@@ -2925,7 +2925,7 @@ exports[`Slider Snapshots no thumbs 1`] = `
     />
     <div
       className="slider-wrapper axis-horizontal"
-      style={Object {}}
+      style={{}}
     >
       <ul
         className="slider animated"
@@ -2933,7 +2933,7 @@ exports[`Slider Snapshots no thumbs 1`] = `
         onTouchEnd={[Function]}
         onTouchStart={[Function]}
         style={
-          Object {
+          {
             "MozTransitionDuration": "350ms",
             "OTransform": "translate3d(0,0,0)",
             "OTransitionDuration": "350ms",
@@ -2949,7 +2949,7 @@ exports[`Slider Snapshots no thumbs 1`] = `
         <li
           className="slide selected previous"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/1.jpeg"
@@ -2958,7 +2958,7 @@ exports[`Slider Snapshots no thumbs 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/2.jpeg"
@@ -2967,7 +2967,7 @@ exports[`Slider Snapshots no thumbs 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/3.jpeg"
@@ -2976,7 +2976,7 @@ exports[`Slider Snapshots no thumbs 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/4.jpeg"
@@ -2985,7 +2985,7 @@ exports[`Slider Snapshots no thumbs 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/5.jpeg"
@@ -2994,7 +2994,7 @@ exports[`Slider Snapshots no thumbs 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/6.jpeg"
@@ -3003,7 +3003,7 @@ exports[`Slider Snapshots no thumbs 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/7.jpeg"
@@ -3033,7 +3033,7 @@ exports[`Slider Snapshots swipeable false 1`] = `
   <div
     className="carousel carousel-slider"
     style={
-      Object {
+      {
         "width": "100%",
       }
     }
@@ -3113,12 +3113,12 @@ exports[`Slider Snapshots swipeable false 1`] = `
     />
     <div
       className="slider-wrapper axis-horizontal"
-      style={Object {}}
+      style={{}}
     >
       <ul
         className="slider animated"
         style={
-          Object {
+          {
             "MozTransitionDuration": "350ms",
             "OTransform": "translate3d(0,0,0)",
             "OTransitionDuration": "350ms",
@@ -3134,7 +3134,7 @@ exports[`Slider Snapshots swipeable false 1`] = `
         <li
           className="slide selected previous"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/1.jpeg"
@@ -3143,7 +3143,7 @@ exports[`Slider Snapshots swipeable false 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/2.jpeg"
@@ -3152,7 +3152,7 @@ exports[`Slider Snapshots swipeable false 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/3.jpeg"
@@ -3161,7 +3161,7 @@ exports[`Slider Snapshots swipeable false 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/4.jpeg"
@@ -3170,7 +3170,7 @@ exports[`Slider Snapshots swipeable false 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/5.jpeg"
@@ -3179,7 +3179,7 @@ exports[`Slider Snapshots swipeable false 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/6.jpeg"
@@ -3188,7 +3188,7 @@ exports[`Slider Snapshots swipeable false 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/7.jpeg"
@@ -3226,7 +3226,7 @@ exports[`Slider Snapshots swipeable false 1`] = `
         onTouchEnd={[Function]}
         onTouchStart={[Function]}
         style={
-          Object {
+          {
             "MozTransform": "translate3d(0,0,0)",
             "MozTransitionDuration": "350ms",
             "MsTransform": "translate3d(0,0,0)",
@@ -3249,7 +3249,7 @@ exports[`Slider Snapshots swipeable false 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -3266,7 +3266,7 @@ exports[`Slider Snapshots swipeable false 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -3283,7 +3283,7 @@ exports[`Slider Snapshots swipeable false 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -3300,7 +3300,7 @@ exports[`Slider Snapshots swipeable false 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -3317,7 +3317,7 @@ exports[`Slider Snapshots swipeable false 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -3334,7 +3334,7 @@ exports[`Slider Snapshots swipeable false 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -3351,7 +3351,7 @@ exports[`Slider Snapshots swipeable false 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -3380,7 +3380,7 @@ exports[`Slider Snapshots vertical axis 1`] = `
   <div
     className="carousel carousel-slider"
     style={
-      Object {
+      {
         "width": "100%",
       }
     }
@@ -3461,7 +3461,7 @@ exports[`Slider Snapshots vertical axis 1`] = `
     <div
       className="slider-wrapper axis-vertical"
       style={
-        Object {
+        {
           "height": 1,
         }
       }
@@ -3472,7 +3472,7 @@ exports[`Slider Snapshots vertical axis 1`] = `
         onTouchEnd={[Function]}
         onTouchStart={[Function]}
         style={
-          Object {
+          {
             "MozTransitionDuration": "350ms",
             "OTransform": "translate3d(0,0,0)",
             "OTransitionDuration": "350ms",
@@ -3489,7 +3489,7 @@ exports[`Slider Snapshots vertical axis 1`] = `
         <li
           className="slide selected previous"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/1.jpeg"
@@ -3498,7 +3498,7 @@ exports[`Slider Snapshots vertical axis 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/2.jpeg"
@@ -3507,7 +3507,7 @@ exports[`Slider Snapshots vertical axis 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/3.jpeg"
@@ -3516,7 +3516,7 @@ exports[`Slider Snapshots vertical axis 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/4.jpeg"
@@ -3525,7 +3525,7 @@ exports[`Slider Snapshots vertical axis 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/5.jpeg"
@@ -3534,7 +3534,7 @@ exports[`Slider Snapshots vertical axis 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/6.jpeg"
@@ -3543,7 +3543,7 @@ exports[`Slider Snapshots vertical axis 1`] = `
         <li
           className="slide"
           onClick={[Function]}
-          style={Object {}}
+          style={{}}
         >
           <img
             src="assets/7.jpeg"
@@ -3581,7 +3581,7 @@ exports[`Slider Snapshots vertical axis 1`] = `
         onTouchEnd={[Function]}
         onTouchStart={[Function]}
         style={
-          Object {
+          {
             "MozTransform": "translate3d(0,0,0)",
             "MozTransitionDuration": "350ms",
             "MsTransform": "translate3d(0,0,0)",
@@ -3604,7 +3604,7 @@ exports[`Slider Snapshots vertical axis 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -3621,7 +3621,7 @@ exports[`Slider Snapshots vertical axis 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -3638,7 +3638,7 @@ exports[`Slider Snapshots vertical axis 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -3655,7 +3655,7 @@ exports[`Slider Snapshots vertical axis 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -3672,7 +3672,7 @@ exports[`Slider Snapshots vertical axis 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -3689,7 +3689,7 @@ exports[`Slider Snapshots vertical axis 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }
@@ -3706,7 +3706,7 @@ exports[`Slider Snapshots vertical axis 1`] = `
           onKeyDown={[Function]}
           role="button"
           style={
-            Object {
+            {
               "width": 80,
             }
           }

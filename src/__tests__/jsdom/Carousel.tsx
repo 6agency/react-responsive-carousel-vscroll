@@ -1,27 +1,29 @@
-import React from 'react';
+import React, {act} from 'react';
 import ReactDOM from 'react-dom';
 // @ts-ignore
-import { shallow, mount, ReactWrapper } from 'enzyme';
+import Enzyme, { shallow, mount, ReactWrapper } from 'enzyme';
+
+import Adapter from '@cfaester/enzyme-adapter-react-18';
+
+Enzyme.configure({ adapter: new Adapter() });
+
+
 import renderer from 'react-test-renderer';
-import * as index from '../index';
+import * as index from '../../index';
 // @ts-ignore
 import Swipe, { ReactEasySwipeProps } from 'react-easy-swipe';
-import Carousel from '../components/Carousel';
-import Thumbs from '../components/Thumbs';
-import getDocument from '../shims/document';
-import getWindow from '../shims/window';
+import Carousel from '../../components/Carousel';
+import Thumbs from '../../components/Thumbs';
+import getDocument from '../../shims/document';
+import getWindow from '../../shims/window';
 import {
     CarouselProps,
     AnimationHandler,
     SwipeAnimationHandler,
     StopSwipingHandler,
-} from '../components/Carousel/types';
-import { getPosition } from '../components/Carousel/utils';
-import { slideSwipeAnimationHandler } from '../components/Carousel/animations';
-
-/**
- * @jest-environment jsdom
- */
+} from '../../components/Carousel/types';
+import { getPosition } from '../../components/Carousel/utils';
+import { slideSwipeAnimationHandler } from '../../components/Carousel/animations';
 
 // @ts-ignore
 const findDOMNodeWithinWrapper = (wrapper: ReactWrapper, domNode: HTMLElement) => {
@@ -554,39 +556,46 @@ describe('Slider', function() {
             expect(componentInstance.state.selectedItem).toBe(3);
         });
 
-        it('should update the position of the Carousel if selectedItem is changed', () => {
-            findDOMNodeWithinWrapper(component, componentInstance.itemsRef[2]).simulate('click');
+        it('should update the position of the Carousel if selectedItem is changed', async () => {
+            await act(() => {
+                findDOMNodeWithinWrapper(component, componentInstance.itemsRef[2]).simulate('click');
+            });
             expect(componentInstance.state.selectedItem).toBe(2);
-
-            findDOMNodeWithinWrapper(component, componentInstance.itemsRef[3]).simulate('click');
+            await act(() => {
+                findDOMNodeWithinWrapper(component, componentInstance.itemsRef[3]).simulate('click');
+            });
             expect(componentInstance.state.selectedItem).toBe(3);
         });
     });
 
-    describe('Selecting', () => {
-        it('should set the index as selectedItem when clicked', () => {
+    describe('Selecting',  () => {
+        it('should set the index as selectedItem when clicked', async() => {
             expect(componentInstance.state.selectedItem).toBe(0);
-
-            findDOMNodeWithinWrapper(component, componentInstance.itemsRef[1]).simulate('click');
+            await act(() => {
+                findDOMNodeWithinWrapper(component, componentInstance.itemsRef[1]).simulate('click');
+            });
             expect(componentInstance.state.selectedItem).toBe(1);
-
-            findDOMNodeWithinWrapper(component, componentInstance.itemsRef[3]).simulate('click');
+            await act(() => {
+                findDOMNodeWithinWrapper(component, componentInstance.itemsRef[3]).simulate('click');
+            });
             expect(componentInstance.state.selectedItem).toBe(3);
         });
 
-        it('should call a given onSelectItem function when an item is clicked', () => {
+        it('should call a given onSelectItem function when an item is clicked', async () => {
             var mockedFunction = jest.fn();
 
             renderDefaultComponent({ onClickItem: mockedFunction });
-
-            findDOMNodeWithinWrapper(component, componentInstance.itemsRef[1]).simulate('click');
+            await act(() => {
+                findDOMNodeWithinWrapper(component, componentInstance.itemsRef[1]).simulate('click');
+            });
             expect(mockedFunction).toBeCalled();
-
-            findDOMNodeWithinWrapper(component, componentInstance.itemsRef[0]).simulate('click');
+            await act(() => {
+                findDOMNodeWithinWrapper(component, componentInstance.itemsRef[0]).simulate('click');
+            });
             expect(componentInstance.state.selectedItem).toBe(0);
         });
 
-        it('should call onSelectItem function when exactly 1 child is present', () => {
+        it('should call onSelectItem function when exactly 1 child is present', async () => {
             var mockedFunction = jest.fn();
 
             renderDefaultComponent({
@@ -594,8 +603,9 @@ describe('Slider', function() {
                 onClickItem: mockedFunction,
             });
             expect(componentInstance.state.selectedItem).toBe(0);
-
-            findDOMNodeWithinWrapper(component, componentInstance.itemsRef[0]).simulate('click');
+            await act(() => {
+                findDOMNodeWithinWrapper(component, componentInstance.itemsRef[0]).simulate('click');
+            });
             expect(componentInstance.state.selectedItem).toBe(0);
             expect(mockedFunction).toBeCalled();
         });
@@ -609,27 +619,34 @@ describe('Slider', function() {
             componentInstance.showArrows = true;
         });
 
-        it('should disable the left arrow if we are showing the first item', () => {
-            findDOMNodeWithinWrapper(component, componentInstance.itemsRef[0]).simulate('click');
+        it('should disable the left arrow if we are showing the first item', async () => {
+            await act(() => {
+                findDOMNodeWithinWrapper(component, componentInstance.itemsRef[0]).simulate('click');
+
+            });
             expect(
                 findDOMNodeByClass(componentInstance, '.carousel-slider .control-prev.control-disabled')
             ).toHaveLength(1);
         });
-
-        it('should enable the left arrow if we are showing other than the first item', () => {
-            findDOMNodeWithinWrapper(component, componentInstance.itemsRef[1]).simulate('click');
+        it('should enable the left arrow if we are showing other than the first item', async () => {
+            await act(() => {
+                findDOMNodeWithinWrapper(component, componentInstance.itemsRef[1]).simulate('click');
+            });
             expect(
                 findDOMNodeByClass(componentInstance, '.carousel-slider .control-prev.control-disabled')
             ).toHaveLength(0);
         });
 
-        it('should disable the right arrow if we reach the lastPosition', () => {
-            findDOMNodeWithinWrapper(component, componentInstance.itemsRef[1]).simulate('click');
+        it('should disable the right arrow if we reach the lastPosition', async () => {
+            await act(() => {
+                findDOMNodeWithinWrapper(component, componentInstance.itemsRef[1]).simulate('click');
+            });
             expect(
                 findDOMNodeByClass(componentInstance, '.carousel-slider .control-next.control-disabled')
             ).toHaveLength(0);
-
-            findDOMNodeWithinWrapper(component, componentInstance.itemsRef[6]).simulate('click');
+            await act(() => {
+                findDOMNodeWithinWrapper(component, componentInstance.itemsRef[6]).simulate('click');
+            });
             expect(
                 findDOMNodeByClass(componentInstance, '.carousel-slider .control-next.control-disabled')
             ).toHaveLength(1);
@@ -643,37 +660,43 @@ describe('Slider', function() {
             });
         });
 
-        it('should enable the prev arrow if we are showing the first item', () => {
-            findDOMNodeWithinWrapper(component, componentInstance.itemsRef[0]).simulate('click');
+        it('should enable the prev arrow if we are showing the first item', async () => {
+            await act(() => {
+                findDOMNodeWithinWrapper(component, componentInstance.itemsRef[0]).simulate('click');
+            });
             expect(
                 findDOMNodeByClass(componentInstance, '.carousel-slider .control-prev.control-disabled')
             ).toHaveLength(0);
         });
 
-        it('should enable the right arrow if we reach the lastPosition', () => {
-            findDOMNodeWithinWrapper(component, componentInstance.itemsRef[6]).simulate('click');
+        it('should enable the right arrow if we reach the lastPosition', async () => {
+            await act(() => {
+                findDOMNodeWithinWrapper(component, componentInstance.itemsRef[6]).simulate('click');
+            });
             expect(
                 findDOMNodeByClass(componentInstance, '.carousel-slider .control-next.control-disabled')
             ).toHaveLength(0);
         });
 
-        it('should move to the first one if increment was called in the last', () => {
-            componentInstance.setState({
-                selectedItem: lastItemIndex,
+        it('should move to the first one if increment was called in the last', async () => {
+            await  act(() => {
+                componentInstance.setState({
+                    selectedItem: lastItemIndex,
+                });
             });
 
             expect(componentInstance.state.selectedItem).toBe(lastItemIndex);
-
-            componentInstance.increment();
-
+            await act(() => {
+                componentInstance.increment();
+            });
             expect(componentInstance.state.selectedItem).toBe(0);
         });
 
-        it('should move to the last one if decrement was called in the first', () => {
+        it('should move to the last one if decrement was called in the first', async () => {
             expect(componentInstance.state.selectedItem).toBe(0);
-
-            componentInstance.decrement();
-
+            await act(() => {
+                componentInstance.decrement();
+            });
             expect(componentInstance.state.selectedItem).toBe(lastItemIndex);
         });
 
@@ -692,19 +715,23 @@ describe('Slider', function() {
             ).toContain('itemKey0clone');
         });
 
-        it('should work with minimal children', () => {
+        it('should work with minimal children', async () => {
             renderDefaultComponent({
                 children: [<img src="assets/1.jpeg" key="1" />, <img src="assets/2.jpeg" key="2" />],
                 infiniteLoop: true,
             });
-            componentInstance.decrement();
+            await act(() => {
+                componentInstance.decrement();
+            });
             expect(componentInstance.state.selectedItem).toBe(lastItemIndex);
 
             renderDefaultComponent({
                 children: [<img src="assets/1.jpeg" key="1" />],
                 infiniteLoop: true,
             });
-            componentInstance.decrement();
+            await act(() => {
+                componentInstance.decrement();
+            });
             expect(componentInstance.state.selectedItem).toBe(lastItemIndex);
         });
 
@@ -732,82 +759,94 @@ describe('Slider', function() {
             jest.useRealTimers();
         });
 
-        it('should disable when only 1 child is present', () => {
+        it('should disable when only 1 child is present',async  () => {
             renderDefaultComponent({
                 children: [<img src="assets/1.jpeg" key="1" />],
                 autoPlay: true,
             });
 
             expect(componentInstance.state.selectedItem).toBe(0);
-
-            jest.runOnlyPendingTimers();
+            await act(() => {
+                jest.runOnlyPendingTimers();
+            });
 
             expect(componentInstance.state.selectedItem).toBe(0);
         });
 
-        it('should change items automatically', () => {
+        it('should change items automatically', async () => {
             expect(componentInstance.state.selectedItem).toBe(0);
+            await act(() => {
+                jest.runOnlyPendingTimers();
+            });
+            expect(componentInstance.state.selectedItem).toBe(1);
+                await act(() => {
+                 jest.runOnlyPendingTimers();
+                });
+            expect(componentInstance.state.selectedItem).toBe(2);
+        });
 
-            jest.runOnlyPendingTimers();
+        it('should not move automatically if hovering', async () => {
+            await  act(() => {
+                componentInstance.stopOnHover();
+            });
+
+            expect(componentInstance.state.selectedItem).toBe(0);
+            await  act(() => {
+             jest.runOnlyPendingTimers();
+            });
+            expect(componentInstance.state.selectedItem).toBe(0);
+            await  act(() => {
+                componentInstance.autoPlay();
+            });
+            await act(() => {
+                jest.runOnlyPendingTimers();
+            })
+            expect(componentInstance.state.selectedItem).toBe(1);
+        });
+
+        it('should restart auto-play after disabling it via props', async () => {
+            expect(componentInstance.state.selectedItem).toBe(0);
+            await  act(() => {
+                jest.runOnlyPendingTimers();
+            });
 
             expect(componentInstance.state.selectedItem).toBe(1);
+            await  act(() => {
+                component.setProps({
+                    autoPlay: false,
+                });
+            });
+            await  act(() => {
+                jest.runOnlyPendingTimers();
+            });
+            expect(componentInstance.state.selectedItem).toBe(1);
+            await act(() => {
+                component.setProps({
+                    autoPlay: true,
+                });
+            });
 
-            jest.runOnlyPendingTimers();
+            await  act(() => {
+                jest.runOnlyPendingTimers();
+            });
 
             expect(componentInstance.state.selectedItem).toBe(2);
         });
 
-        it('should not move automatically if hovering', () => {
-            componentInstance.stopOnHover();
-
-            expect(componentInstance.state.selectedItem).toBe(0);
-
-            jest.runOnlyPendingTimers();
-
-            expect(componentInstance.state.selectedItem).toBe(0);
-
-            componentInstance.autoPlay();
-
-            jest.runOnlyPendingTimers();
-
-            expect(componentInstance.state.selectedItem).toBe(1);
-        });
-
-        it('should restart auto-play after disabling it via props', () => {
-            expect(componentInstance.state.selectedItem).toBe(0);
-
-            jest.runOnlyPendingTimers();
-
-            expect(componentInstance.state.selectedItem).toBe(1);
-
-            component.setProps({
-                autoPlay: false,
-            });
-
-            jest.runOnlyPendingTimers();
-
-            expect(componentInstance.state.selectedItem).toBe(1);
-
-            component.setProps({
-                autoPlay: true,
-            });
-
-            jest.runOnlyPendingTimers();
-
-            expect(componentInstance.state.selectedItem).toBe(2);
-        });
-
-        it('should reset when changing the slide through indicator', () => {
+        it('should reset when changing the slide through indicator', async () => {
             renderDefaultComponent({ interval: 3000, autoPlay: true });
-            jest.advanceTimersByTime(2000);
-
+            await  act(() => {
+                jest.advanceTimersByTime(2000);
+            });
             expect(componentInstance.state.selectedItem).toBe(0);
-
-            const changeToSecondItem = componentInstance.changeItem(1);
-            // it only runs with an event
-            changeToSecondItem(new MouseEvent('click'));
-
-            jest.advanceTimersByTime(1000);
+            await act(() => {
+                const changeToSecondItem = componentInstance.changeItem(1);
+                // it only runs with an event
+                changeToSecondItem(new MouseEvent('click'));
+            });
+            await  act(() => {
+                jest.advanceTimersByTime(1000);
+            });
 
             expect(componentInstance.state.selectedItem).toBe(1);
         });
@@ -833,54 +872,62 @@ describe('Slider', function() {
             jest.useRealTimers();
         });
 
-        it('should automatically loop infinitely', () => {
+        it('should automatically loop infinitely', async  () => {
             expect(componentInstance.state.selectedItem).toBe(0);
-
-            jest.runOnlyPendingTimers();
-
+            await act(() => {
+                jest.runOnlyPendingTimers();
+            });
             expect(componentInstance.state.selectedItem).toBe(1);
-
-            jest.runOnlyPendingTimers();
-
+            await act(() => {
+                jest.runOnlyPendingTimers();
+            });
             expect(componentInstance.state.selectedItem).toBe(2);
-
-            jest.runOnlyPendingTimers();
-
+            await act(() => {
+                jest.runOnlyPendingTimers();
+            });
             expect(componentInstance.state.selectedItem).toBe(0);
-
-            jest.runOnlyPendingTimers();
-
+            await act(() => {
+                jest.runOnlyPendingTimers();
+            });
             expect(componentInstance.state.selectedItem).toBe(1);
-
-            jest.runOnlyPendingTimers();
-
+            await act(() => {
+                jest.runOnlyPendingTimers();
+            });
             expect(componentInstance.state.selectedItem).toBe(2);
         });
     });
 
     describe('Mouse enter/leave', () => {
         describe('onMouseEnter', () => {
-            it('should set isMouseEntered to true', () => {
-                componentInstance.stopOnHover();
+            it('should set isMouseEntered to true', async () => {
+                await act(() => {
+                    componentInstance.stopOnHover();
+                });
                 expect(componentInstance.state.isMouseEntered).toBe(true);
             });
 
-            it('should stop auto play when hovering', () => {
+            it('should stop auto play when hovering', async () => {
                 componentInstance.clearAutoPlay = jest.fn();
-                componentInstance.stopOnHover();
+                await act(() => {
+                    componentInstance.stopOnHover();
+                });
                 expect(componentInstance.clearAutoPlay).toHaveBeenCalledTimes(1);
             });
         });
 
         describe('onMouseLeave', () => {
-            it('should set isMouseEntered to false', () => {
-                componentInstance.startOnLeave();
+            it('should set isMouseEntered to false', async () => {
+                await act(() => {
+                    componentInstance.startOnLeave();
+                });
                 expect(componentInstance.state.isMouseEntered).toBe(false);
             });
 
-            it('should start auto play again after hovering', () => {
+            it('should start auto play again after hovering',async  () => {
                 componentInstance.autoPlay = jest.fn();
-                componentInstance.startOnLeave();
+                await act(() => {
+                    componentInstance.startOnLeave();
+                });
                 expect(componentInstance.autoPlay).toHaveBeenCalledTimes(1);
             });
         });
@@ -888,9 +935,11 @@ describe('Slider', function() {
 
     describe('Focus', () => {
         describe('calling forceFocus', () => {
-            it('should call carousel wrapper focus', () => {
+            it('should call carousel wrapper focus', async () => {
                 componentInstance.carouselWrapperRef.focus = jest.fn();
-                componentInstance.forceFocus();
+                await act(() => {
+                    componentInstance.forceFocus();
+                });
                 expect(componentInstance.carouselWrapperRef.focus).toHaveBeenCalledTimes(1);
             });
         });
@@ -918,16 +967,20 @@ describe('Slider', function() {
 
     describe('Swiping', () => {
         describe('onSwipeStart', () => {
-            it('should set swiping to true', () => {
-                componentInstance.onSwipeStart();
+            it('should set swiping to true', async () => {
+                await act(() => {
+                    componentInstance.onSwipeStart();
+                });
                 expect(componentInstance.state.swiping).toBe(true);
             });
 
-            it('should call onSwipeStart callback', () => {
+            it('should call onSwipeStart callback', async () => {
                 var onSwipeStartFunction = jest.fn();
-                renderDefaultComponent({ onSwipeStart: onSwipeStartFunction });
+                renderDefaultComponent({onSwipeStart: onSwipeStartFunction});
 
-                componentInstance.onSwipeStart();
+                await act(() => {
+                    componentInstance.onSwipeStart();
+                });
                 expect(onSwipeStartFunction).toBeCalled();
             });
         });
@@ -955,53 +1008,65 @@ describe('Slider', function() {
                 ).toBe(false);
             });
 
-            it('should call the swipeAnimationHandler when onSwipeMove is fired', () => {
-                componentInstance.onSwipeMove({
-                    x: 10,
-                    y: 0,
+            it('should call the swipeAnimationHandler when onSwipeMove is fired', async () => {
+                await act(() => {
+                    componentInstance.onSwipeMove({
+                        x: 10,
+                        y: 0,
+                    });
                 });
-
                 expect(swipeAnimationHandler).toHaveBeenCalled();
             });
 
-            it('should call onSwipeMove callback', () => {
+            it('should call onSwipeMove callback', async () => {
                 var onSwipeMoveFunction = jest.fn();
-                renderDefaultComponent({ onSwipeMove: onSwipeMoveFunction });
+                renderDefaultComponent({onSwipeMove: onSwipeMoveFunction});
 
-                componentInstance.onSwipeMove({ x: 0, y: 10 });
+                await act(() => {
+                    componentInstance.onSwipeMove({x: 0, y: 10});
+                });
                 expect(onSwipeMoveFunction).toHaveBeenCalled();
             });
         });
 
         describe('onSwipeEnd', () => {
-            it('should set swiping to false', () => {
-                componentInstance.onSwipeEnd();
+            it('should set swiping to false', async () => {
+                await act(() => {
+                    componentInstance.onSwipeEnd();
+                });
                 expect(componentInstance.state.swiping).toBe(false);
             });
 
-            it('should stop autoplay', () => {
+            it('should stop autoplay', async () => {
                 componentInstance.clearAutoPlay = jest.fn();
-                componentInstance.onSwipeEnd();
+                await act(() => {
+                    componentInstance.onSwipeEnd();
+                });
                 expect(componentInstance.clearAutoPlay).toHaveBeenCalledTimes(1);
             });
 
-            it('should not start autoplay again', () => {
+            it('should not start autoplay again', async () => {
                 componentInstance.autoPlay = jest.fn();
-                componentInstance.onSwipeEnd();
+                await act(() => {
+                    componentInstance.onSwipeEnd();
+                });
                 expect(componentInstance.autoPlay).toHaveBeenCalledTimes(0);
             });
 
-            it('should start autoplay again when autoplay is true', () => {
+            it('should start autoplay again when autoplay is true', async () => {
                 renderDefaultComponent({ autoPlay: true });
                 componentInstance.autoPlay = jest.fn();
-                componentInstance.onSwipeEnd();
+                await act(() => {
+                    componentInstance.onSwipeEnd();
+                });
                 expect(componentInstance.autoPlay).toHaveBeenCalledTimes(1);
             });
-            it('should call onSwipeEnd callback', () => {
+            it('should call onSwipeEnd callback', async () => {
                 var onSwipeEndFunction = jest.fn();
                 renderDefaultComponent({ onSwipeEnd: onSwipeEndFunction });
-
-                componentInstance.onSwipeEnd();
+                await act(() => {
+                     componentInstance.onSwipeEnd();
+                })
                 expect(onSwipeEndFunction).toBeCalled();
             });
         });
@@ -1016,7 +1081,6 @@ describe('Slider', function() {
                     .find(Swipe)
                     .first()
                     .props();
-
                 expect(swipeProps.onSwipeUp).toBe(componentInstance.onSwipeForward);
                 expect(swipeProps.onSwipeDown).toBe(componentInstance.onSwipeBackwards);
             });
@@ -1040,22 +1104,23 @@ describe('Slider', function() {
         });
 
         describe('emulateTouch', () => {
-            it('should cancel click when swipe forward and backwards with emulated touch', () => {
+            it('should cancel click when swipe forward and backwards with emulated touch',async  () => {
                 renderDefaultComponent({
                     emulateTouch: true,
                 });
 
                 let currentIndex = componentInstance.state.selectedItem;
                 const items = componentInstance.props.children;
-
-                componentInstance.onSwipeForward();
-                componentInstance.handleClickItem(currentIndex, items[currentIndex]);
+                await act(() => {
+                    componentInstance.onSwipeForward();
+                    componentInstance.handleClickItem(currentIndex, items[currentIndex]);
+                });
                 ++currentIndex;
-
                 expect(componentInstance.state.selectedItem).toEqual(currentIndex);
-
-                componentInstance.onSwipeBackwards();
-                componentInstance.handleClickItem(currentIndex, items[currentIndex]);
+                await act(() => {
+                    componentInstance.onSwipeBackwards();
+                    componentInstance.handleClickItem(currentIndex, items[currentIndex]);
+                });
                 --currentIndex;
 
                 expect(componentInstance.state.selectedItem).toEqual(currentIndex);

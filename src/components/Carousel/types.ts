@@ -85,7 +85,6 @@ export interface CarouselState {
     isMouseEntered: boolean;
     itemSize: number;
     dieOut?: boolean;
-
     previousItem: number;
     selectedItem: number;
     swiping?: boolean;

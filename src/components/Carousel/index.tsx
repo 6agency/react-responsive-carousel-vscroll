@@ -539,8 +539,6 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
     };
 
     onSwipeForward = () => {
-        console.log(this.state, 'fw')
-
         if (this.state.dieOut) {
             return;
         }
@@ -552,7 +550,6 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
     };
 
     onSwipeBackwards = () => {
-        console.log(this.state, 'bc')
         if (this.state.dieOut) {
             return;
         }

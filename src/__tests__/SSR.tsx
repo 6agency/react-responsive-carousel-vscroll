@@ -7,8 +7,8 @@ describe('SSR', () => {
         expect(() =>
             ReactDOMServer.renderToStaticMarkup(
                 <Carousel>
-                    <img src="assets/1.jpeg" key="1" />
-                    <img src="assets/2.jpeg" key="2" />
+                    <img src="jsdom/assets/1.jpeg" key="1" />
+                    <img src="jsdom/assets/2.jpeg" key="2" />
                 </Carousel>
             )
         ).not.toThrow();
