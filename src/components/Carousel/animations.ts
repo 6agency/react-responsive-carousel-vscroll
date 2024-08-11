@@ -100,7 +100,7 @@ export const slideSwipeAnimationHandler: SwipeAnimationHandler = (
     }
     // If horizontal and the user mostly wants to move up/down, dont trigger left/right scroll
     let isSwipeBlockedFromDeltaExceedPrimary = false;
-    if (isHorizontal && Math.abs(delta.x) < Math.abs(delta.y)) {
+    if (props.primaryDeltaOnly && isHorizontal && Math.abs(delta.x) < Math.abs(delta.y)) {
         isSwipeBlockedFromDeltaExceedPrimary = true;
     }
 

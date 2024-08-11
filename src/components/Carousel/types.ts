@@ -66,6 +66,7 @@ export interface CarouselProps {
     stopOnHover: boolean;
     swipeable: boolean;
     swipeScrollTolerance: number;
+    primaryDeltaOnly?: boolean;
     thumbWidth?: number;
     transitionTime: number;
     useKeyboardArrows?: boolean;

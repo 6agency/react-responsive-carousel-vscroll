@@ -41,6 +41,7 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
         onSwipeStart: () => {},
         onSwipeEnd: () => {},
         onSwipeMove: () => false,
+        primaryDeltaOnly: false,
         preventMovementUntilSwipeScrollTolerance: false,
         renderArrowPrev: (onClickHandler: () => void, hasPrev: boolean, label: string) => (
             <button type="button" aria-label={label} className={klass.ARROW_PREV(!hasPrev)} onClick={onClickHandler} />
