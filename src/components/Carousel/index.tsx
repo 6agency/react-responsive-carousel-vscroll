@@ -738,6 +738,7 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
         const lastClone = itemsClone.pop();
 
         let swiperProps: ReactEasySwipeProps = {
+            primaryDeltaOnly: this.props.primaryDeltaOnly,
             className: klass.SLIDER(true, this.state.swiping),
             onSwipeMove: this.onSwipeMove,
             onSwipeStart: this.onSwipeStart,

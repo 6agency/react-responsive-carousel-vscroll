@@ -42,6 +42,7 @@ class ReactSwipe extends Component {
         className: PropTypes.string,
         style: PropTypes.object,
         children: PropTypes.node,
+        primaryDeltaOnly: PropTypes.bool,
         allowMouseEvents: PropTypes.bool,
         onSwipeUp: PropTypes.func,
         onSwipeDown: PropTypes.func,
@@ -57,6 +58,7 @@ class ReactSwipe extends Component {
     static defaultProps = {
         tagName: 'div',
         allowMouseEvents: false,
+        primaryDeltaOnly: false,
         onSwipeUp() {},
         onSwipeDown() {},
         onSwipeLeft() {},
@@ -143,7 +145,7 @@ class ReactSwipe extends Component {
         const deltaX = x - this.moveStart.x;
         const deltaY = y - this.moveStart.y;
 
-        if (Math.abs(deltaX) <= Math.abs(deltaY)) {
+        if (this.primaryDeltaOnly && Math.abs(deltaX) <= Math.abs(deltaY)) {
             return;
         }
         this.moving = true;
@@ -197,6 +199,7 @@ class ReactSwipe extends Component {
             style,
             children,
             allowMouseEvents,
+            primaryDeltaOnly,
             onSwipeUp,
             onSwipeDown,
             onSwipeLeft,
