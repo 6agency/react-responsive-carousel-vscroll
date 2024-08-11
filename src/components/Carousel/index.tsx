@@ -1,6 +1,6 @@
 import React, { Children } from 'react';
 // @ts-ignore
-import Swipe, { ReactEasySwipeProps } from 'react-easy-swipe';
+import Swipe, { ReactEasySwipeProps } from './react-swipe';
 import klass from '../../cssClasses';
 import Thumbs from '../Thumbs';
 import getDocument from '../../shims/document';
@@ -165,17 +165,14 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
 
         if (prevState.swiping && !this.state.swiping) {
             // We stopped swiping, ensure we are heading to the new/current slide and not stuck
-
             this.setState({
                 ...this.props.stopSwipingHandler(this.props, this.state),
             });
         }
 
         if (prevProps.selectedItem !== this.props.selectedItem || prevProps.centerMode !== this.props.centerMode) {
-            if (!this.props?.dieOut) {
-                this.updateSizes();
-                this.moveTo(this.props.selectedItem);
-            }
+            this.updateSizes();
+            this.moveTo(this.props.selectedItem);
         }
 
         if (prevProps.autoPlay !== this.props.autoPlay) {
@@ -468,12 +465,10 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
             this.setState.bind(this)
         );
 
-        const dieOut = animationHandlerResponse.dieOut;
-        if (dieOut) {
+        if (this.state.dieOut) {
             return false;
         }
-        delete animationHandlerResponse.dieOut;
-        // TODO - when we know this works, restructure! (ts fails as we're trying to pipe out a new prop!'
+
         // @ts-ignore
         this.setState({
             ...animationHandlerResponse,
@@ -543,6 +538,11 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
     };
 
     onSwipeForward = () => {
+        console.log(this.state, 'fw')
+
+        if (this.state.dieOut) {
+            return;
+        }
         this.increment(1);
 
         if (this.props.emulateTouch) {
@@ -551,6 +551,10 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
     };
 
     onSwipeBackwards = () => {
+        console.log(this.state, 'bc')
+        if (this.state.dieOut) {
+            return;
+        }
         this.decrement(1);
 
         if (this.props.emulateTouch) {

@@ -140,10 +140,16 @@ export const slideSwipeAnimationHandler: SwipeAnimationHandler = (
         setState({
             cancelClick: false,
             swiping: false,
-            swipeMovementStarted: false
+            swipeMovementStarted: false,
+            dieOut: true,
         });
-        returnStyles.dieOut = true;
     }
+    else {
+        setState({
+            dieOut: false,
+        });
+    }
+
 
     return returnStyles;
 };

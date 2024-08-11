@@ -15,10 +15,10 @@ jobs:
               with:
                   cmd: install
 
-            - name: test
+            - name: __tests__
               uses: borales/actions-yarn@v2.0.0
               with:
-                  cmd: test
+                  cmd: __tests__
 
             - name: build
               uses: borales/actions-yarn@v2.0.0
