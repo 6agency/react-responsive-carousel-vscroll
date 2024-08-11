@@ -5,22 +5,13 @@ jobs:
         name: Test
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v1
-            - uses: actions/setup-node@v1
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
               with:
                   node-version: '18.x'
+                  cache: 'npm'
 
-            - name: install
-              uses: borales/actions-yarn@v2.0.0
-              with:
-                  cmd: install
+            - run: npm install
+            - run: npm run test
+            - run: npm run build
 
-            - name: __tests__
-              uses: borales/actions-yarn@v2.0.0
-              with:
-                  cmd: __tests__
-
-            - name: build
-              uses: borales/actions-yarn@v2.0.0
-              with:
-                  cmd: build
