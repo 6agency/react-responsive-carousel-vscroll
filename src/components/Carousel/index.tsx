@@ -125,7 +125,7 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
             selectedItem: props.selectedItem,
             hasMount: false,
             isMouseEntered: false,
-            autoPlay: false,
+            autoPlay: props.autoPlay,
             swiping: false,
             swipeMovementStarted: false,
             cancelClick: false,
